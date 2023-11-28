@@ -9,8 +9,6 @@ else:
     startWatering = 0
 if startWatering:
     print('NOW the watering system is ON!!')
-wateringCounter = 0
-while wateringCounter < 11:
+for _ in range(11):
     print('###### Watering the crops now ######')
-time.sleep(100)
-wateringCounter += 1
+    time.sleep(1)
