@@ -6,6 +6,6 @@ def home_security_system(W, D):
         return "No alarm activation"
 
 # Simulating the home security system with different inputs
-W = 0  # Window closed
-D = 1  # Door opened
+W = int (input("Please enter the W value.(0 means off, 1 means on) \n"))  # Window closed
+D = int (input("Please enter the D value.(0 means off, 1 means on) \n"))  # Door opened
 print(home_security_system(W, D))  # Output: Alarm activates

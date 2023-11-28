@@ -6,6 +6,6 @@ def garage_system(V, C):
         return "Garage door remains in its current state"
 
 # Simulating the garage system with different inputs
-V = 1  # Vehicle is detected
-C = 0  # Remote control not activated
+V = int (input("Please enter the V value.(0 means off, 1 means on) \n"))  # Vehicle is detected
+C = int (input("Please enter the C value.(0 means off, 1 means on) \n"))  # Remote control not activated
 print(garage_system(V, C))  # Output: Garage door opens/closes
