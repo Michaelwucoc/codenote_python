@@ -15,9 +15,5 @@ jobs:
       with:
         python-version: 3.8
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip # 如果有 requirements.txt 文件的话
-
     - name: Run Python script
       run: python ${{ env.PYTHON_SCRIPT_PATH }}  # 替换为你的 Python 文件路径
