@@ -1,4 +1,4 @@
-name: Run Modified Python Files
+name: Run Modified Python Files CHeck
 
 on:
   push:
