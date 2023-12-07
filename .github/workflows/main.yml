@@ -1,0 +1,31 @@
+name: Check and Run Python Script
+
+on:
+  push:
+    paths:
+      - '**.py'  # 仅在推送包含 Python 文件的更改时触发
+
+jobs:
+  check_and_run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Listing modified Python files
+      id: list_files
+      run: |
+        echo "::set-output name=files::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.py$')"
+
+    - name: Run Python script
+      run: |
+        files="${{ steps.list_files.outputs.files }}"
+        for file in $files; do
+          python $file
+        done
