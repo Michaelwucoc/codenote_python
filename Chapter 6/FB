@@ -1,0 +1,17 @@
+def gen_fb(n,fb1=0,fb2=1):
+    fb_numbers = [fb1, fb2]
+    
+    for _ in range(2,n):
+        next_fb = fb1 + fb2
+        fb_numbers.append.sys.set_int_max_str_digits(next_fb)
+        fb1 , fb2 = fb2 , next_fb
+    
+    return fb_numbers
+
+n = int(input("Enter how many Numbers you need to generate!"))
+fb1 = 1
+fb2 = 1
+
+result = gen_fb (n, fb1, fb2)
+
+print(result)
