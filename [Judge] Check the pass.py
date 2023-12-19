@@ -6,5 +6,4 @@ while i == 0:
         print ("Logged in to the server.") #成功输出
         break #退出程序
     else:
-        print ("Password incorrect. Please try again.") #输入失败
-        
+        print ("Password incorrect. Please try again.") 

@@ -10,4 +10,3 @@ while i < 100: #验证
         print ("The number you guessed is too small! Try again")
     else:
         print ("The number you guessed is too big! Try again!")
-    

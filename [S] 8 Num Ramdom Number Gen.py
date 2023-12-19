@@ -6,6 +6,7 @@ x = random.randint (10000000,99999999)
 y = random.randint (10000000,99999999)
 z = random.randint (10000000,99999999)
 
+
 print (x)
 print (y)
 print (z)
